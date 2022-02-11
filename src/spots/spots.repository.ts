@@ -23,6 +23,7 @@ export class SpotsRepository extends Repository<Spot> {
   async getSpotByPlate(plate_number: string): Promise<Spot> {
     const query = this.createQueryBuilder('spot');
 
+    // Spaghetti code, cba jsonb querying
     query.andWhere(
       `spot.parked_plates @> '[{ "plate_number": "${plate_number}"}]'`,
       {
