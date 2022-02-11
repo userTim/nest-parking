@@ -26,3 +26,5 @@ curl --location --request POST 'localhost:3000/spots/retrieve' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'plate_number=m2132s23'
 ```
+
+By default initializes 3 big, 3 medium and 3 small parking spots.
